@@ -37,4 +37,3 @@ console.log(typeof"Ayush");//string
 console.log(typeof 18);//number
 console.log(typeof undefined);//undefined
 console.log(typeof null);//object
-
