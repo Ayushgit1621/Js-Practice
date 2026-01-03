@@ -140,7 +140,7 @@ const score:number=100//Ts
 const id = Symbol('123')
 const id2 = Symbol('123')
 console.log(id===id2);//false
-
+console.log(typeof id);
 const bigNumber = 21374732904634646n
 
 /* 
