@@ -165,3 +165,6 @@ console.log(typeof outTemp);// null but returns Object type
 console.log(typeof heros);//its array but returns object type
 console.log(typeof myFunction); // function type and called as object function 
 console.log(typeof myObj);// object type
+
+
+//node 01_basics/Lec4-9.js-----TO RUN THE CODE 

@@ -203,9 +203,4 @@ console.log(newDate.toLocaleString('default',{
 }));
 
 
-
-
-
-
-
-// node 01_basics/Lec10-13.js
+// node 01_basics/Lec10-13.js-----TO RUN THE CODE 
