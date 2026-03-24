@@ -90,12 +90,12 @@ console.log(real);//[1,2,3,4,,5,6,7,6,7,4,5]
 
 console.log(Array.isArray("Ayush"));//false
 console.log(Array.from("Ayush"));// makes this as an array ['A','y','u','s','h']
-console.log(Array.from({name:"Ayush"}));// INTERVIEW QUES HERE IT NEEDS EITHER KEYS OR VALUES ARRAY TO BE SPECIFIED 
+console.log(Array.from({name:"Ayush"}));// INTERVIEW QUES: HERE IT NEEDS EITHER KEYS OR VALUES ARRAY TO BE SPECIFIED AND CONVERTED TO ARRAY 
 
 let scr1=100
 let scr2=300
 let scr3=500
-console.log(Array.of(scr1,scr2,scr3));
+console.log(Array.of(scr1,scr2,scr3));//[100,200,300]
 
 
 
