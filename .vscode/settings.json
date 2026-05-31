@@ -1,12 +1,12 @@
 {
   "editor.quickSuggestions": {
-    "other": "off",
+    "other": "on",
     "comments": "off",
     "strings": "off"
   },
-  "editor.suggestOnTriggerCharacters": false,
-  "editor.parameterHints.enabled": false,
-  "editor.wordBasedSuggestions": "off",
+  "editor.suggestOnTriggerCharacters": true,
+  "editor.parameterHints.enabled": true,
+  "editor.wordBasedSuggestions": "on",
   "editor.inlineSuggest.enabled": false,
   "editor.suggest.showMethods": false,
   "editor.suggest.showFunctions": false,
@@ -19,17 +19,18 @@
     "javascript": false
   },
   "github.copilot.inlineSuggest.enable": false,
-  "editor.suggest.enabled": false,
-  "editor.suggest.showInlineDetails": false,
+  "editor.suggest.enabled": true,
+  "editor.suggest.showInlineDetails": true,
   "editor.suggest.showStatusBar": false,
-  "editor.acceptSuggestionOnCommitCharacter": false,
-  "editor.acceptSuggestionOnEnter": "off",
+  "editor.acceptSuggestionOnCommitCharacter": true,
+  "editor.acceptSuggestionOnEnter": "on",
   "[javascript]": {
-    "editor.suggest.enabled": false,
+    "editor.suggest.enabled": true,
+    "editor.inlineSuggest.enabled": false,
     "editor.quickSuggestions": {
       "comments": "off",
       "strings": "off",
-      "other": "off"
+      "other": "on"
     }
   }
 }
