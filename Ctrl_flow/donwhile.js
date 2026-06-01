@@ -18,8 +18,9 @@ while (arr<myArray.length){
 }
 
 // do while loops 
-let score=1
+let score=11
 do {
 console.log(`Score is ${score}`);
+score+=1
 }
-while (score<=10);// this works atleast once 
+while (score<=10);// this works atleast once so 11 comes out as one score 
