@@ -1,4 +1,4 @@
-// node Ctrl_flow/filtermap.js
+// node Ctrl_loops/filtermap.js
 const code =["JS","JAVA","PY","RUBY","CPP"]
 const values =code.forEach((item)=>{
     console.log(item);
@@ -20,5 +20,4 @@ console.log(mycode);// [ 'JAVA' ]
     num>4
     })// now it comes empty array hence 
 console.log(newNums);
-
-
+*/
