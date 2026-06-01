@@ -108,7 +108,7 @@ const chai3= ()=>{
 chai3()// Empty paranthesis 
 
 const addTwo=(n1,n2)=>{
-    return n1+n2 // this is explicit return 
+    return n1+n2 // this is explicit return (without a return keyword it wont return the value)
 }
 console.log(addTwo(3,4));//7
 
