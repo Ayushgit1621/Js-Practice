@@ -150,7 +150,3 @@ price >=80?console.log("No buy"):console.log("Buy")
 
 
 
-
-
-
-
