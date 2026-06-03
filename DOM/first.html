@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY DOC</title>
+    <style>
+        .blk{
+            background-color: #212121;
+            color: #fff;
+        }
+    </style>
+</head>
+<body class="blk">
+    
+    <div>
+         <h1 id="title" class="heading">MY DOM LEARNING <span style="display:none; ">Text to check diff </span></h1>
+
+         <!-- Here there is a diff b/w 
+          1. title.innerHTML----'MY DOM LEARNING <span style="display:none; ">Text to check diff </span>(gives the text as well any html written inside)
+          2.title.innerText----MY DOM LEARNING(only the visible part)
+          3.title.textContent-----MY DOM LEARNING Text to check diff(gives complete text part)
+         -->
+          <h2>Lorem ipsum dolor sit amet.</h2>
+          <h2>Lorem ipsum dolor sit amet.</h2>
+          <h2>Lorem ipsum dolor sit amet.</h2>
+          <h2>Lorem ipsum dolor sit amet.</h2>
+          <input type="password" name="" id="">
+          
+         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+             Necessitatibus dolorum officia totam enim accusamus 
+             nemo excepturi adipisci dolore optio praesentium!</p>
+             <ul>
+                <li class ="item_list">one</li>
+                <li class ="item_list">two</li>
+                <li class ="item_list">three</li>
+                <li class ="item_list">four</li>
+             </ul>
+             <!--When we do 
+             document.querySelectorAll('li')
+             there's a protoype named as forEach since an array of list is returned
+
+             NOTE : NodeList and HTML collections are not pure array, since their is not map prototype available for them
+
+             ###  IMP #####
+             const templi=document.querySelectorAll('li')
+            1. templi.style.color="green"// this wont work here
+            2.templi[0].style.color="Red"// this works (index based operations can be performed)
+            3. const myH1=document.querySelectorAll('h1')
+            4.myH1.style.color="Yellow"// wont work 
+            5.myH1[0].style.color="Yellow"// this works 
+            6. templi.forEach(function(li){})
+            7. templi.forEach(function(l){
+                  l.style.backgroundcolor='red'
+                  })
+
+            #IMP :Nodelist can be converted into the arrays to be performed with the various operations or else for loops only use forEach        
+            -->
+<!-- HTML collection
+ 
+const tempclass=document.getElementsByClassName('item_list')
+1. tempclass.forEach(function(li){
+    console.log(li)// does not wokr bcz there does not exist forEach here 
+2. it needs to be converted to array to be used for loop   
+3. const myArr=Array.from(tempclass) 
+4.myArr.forEach(function(li){
+    li.style.color='orange'
+})// this works all content orange colour 
+
+})-->
+
+
+
+    </div>
+</body>
+</html>
