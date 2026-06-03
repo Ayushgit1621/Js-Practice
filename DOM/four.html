@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM PART4</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <ul class="lang">
+        <li>JAVASCRIPT</li>
+
+    </ul>
+</body>
+<script>
+    function addLang(langName){
+       const li= document.createElement('li');
+       li.innerHTML=`${langName}`// here the complete tree is traversed 
+       document.querySelector('.lang').appendChild(li)
+    }
+    addLang("PYTHON")
+    addLang("TYPESCRIPT")
+    addLang("JAVA")
+    //But this task involves one by one traversal of the tree ANd is not an optimised approach
+
+    function addOptiLang(langName){
+       const li= document.createElement('li');
+       li.appendChild(document.createTextNode(langName))// a new textnode is inserted in a li created and worked 
+       document.querySelector('.lang').appendChild(li)
+    }
+    addOptiLang("CPP")
+   
+    // similarly we did in third.html
+    /* const addText=document.createTextNode("Ayush dubey")
+    div.appendChild(addText);// even this involves two step */
+
+    // Edi the element added 
+   const lang2= document.querySelector("li:nth-child(2)")
+   console.log(lang2)
+   lang2.innerHTML="CSS" // this is not a very optimised approach 
+
+   // Approach 2
+   const lang3=document.querySelector("li:nth-child(3)")
+   const newLi=document.createElement('li')
+   newLi.textContent="HTML"
+   lang3.replaceWith(newLi)// innerHTML is better approach than this 
+
+   const print=document.querySelectorAll('.lang li')
+   console.log(print);// to print all the elements of the list 
+
+   const lang4= document.querySelector("li:first-child")
+   lang4.outerHTML='<li>Swift</li>'// changes the first li element to Swift
+
+   // Remove the Element
+
+   const lastLang=document.querySelector('li:last-child')
+  lastLang.remove()// removed last element CPP
+</script>
+</html>
