@@ -20,4 +20,29 @@
        <div class="day">Friday</div>
     </div>
 </body>
+<script>
+    const parent = document.querySelector('.parent')
+    // console.log(parent);// parent class comes up here 
+    // console.log(parent.children);// gives HTML collection of the days and length 
+    // console.log(parent.children[1].innerHTML);// gives Tueday
+    for (let i = 0; i < parent.children.length; i++) {
+        //  console.log(parent.children[i].innerHTML)  ;       
+    }// loops work here 
+    parent.children[1].style.color="red"
+    parent.children[1].style.backgroundColor="yellow"
+    // console.log(parent.firstElementChild);//Monday
+    // console.log(parent.lastElementChild);//Friday
+    // We can move from parent to child as well as child to parent in selection
+    const day1=document.querySelector('.day')
+    console.log(day1);
+    console.log(day1.parentElement);//gives the parent element 
+    console.log(day1.nextElementSibling);//gives the Tuesday and it properties 
+    
+    console.log("NODES: ", parent.childNodes);//The complete NodeList of 11 elements i.e. the 5 days and 6 other elements being 6 enters this actually tells how big the DOM tree is 
+    // Here if we do 2 or more successive line brks browser counts it as just one until next element is detected
+
+    
+    
+    
+</script>
 </html>
