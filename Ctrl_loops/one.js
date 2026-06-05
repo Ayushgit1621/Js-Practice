@@ -145,6 +145,10 @@ console.log(val6);
 const price =100
 price >=80?console.log("No buy"):console.log("Buy")
 
+const score =300
+score<=250 ?console.log("Lost Match"):console.log("Won Match");
+
+
 
 
 
