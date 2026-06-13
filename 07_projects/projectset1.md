@@ -52,5 +52,4 @@ buttons.forEach(function (button) {
     }
   });
 });
-
 ```
