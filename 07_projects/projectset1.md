@@ -85,3 +85,21 @@ form.addEventListener('submit', function (e) {
 });
 
 ```
+
+## Project-3 (Digital clock)
+```javascript
+const clock = document.getElementById('clock');
+// also can be document.querySelector('#clock')
+
+// let date = new Date()
+// console.log(date.toLocaleTimeString());
+// as much as we refresh the Preview the Console gets the new time and we want to get it run every time in preview
+
+// setInterval controls js events (give a method and tell the interval after which it needs to comtinuously run)
+setInterval(function () {
+  let date = new Date();
+  // console.log(date.toLocaleTimeString()); this Section Gives the timming continuously in the console
+  clock.innerHTML = date.toLocaleTimeString();
+}, 1000); // 1000 is in milliSeconds
+
+```
