@@ -201,4 +201,3 @@ function newGame() {
 
 
 ```
-#### NEW CONTENT 
