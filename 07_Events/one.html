@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Events</title>
+</head>
+<body style="background-color: #414141; color: aliceblue">
+    <h2>Amazing image</h2>
+    <div>
+         <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <!-- we can simply put----onclick="alert('owl') here but its not a very feasible approach in JS -->
+
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+    </div>
+</body>
+<script>
+     // js has Events running in a sequence generally but there are some  broswer events get invokde at some activity
+    // document.getElementById('owl').onclick=function(){
+    //     alert("owl clicked")
+    // } This Approach is fine but less features So This event can also be used but eventListener is better 
+
+     // There's one more approach Used for this 
+    // attachEvent()
+    //jQuery- has onEventListener()
+
+
+    /*
+    ***** Things to study For JS interview  on events ****
+    types- mouse event, keyboard events 
+    timestamp, date activity
+    defaultPrevented- a lot of times when we use form in html so to prevent the submit of input data to the url
+    Or Default bheaviour of any tag (such as anchor tag for click and navigate)
+    target, toElement 
+    srcElement , currentTarget
+    clientX, clientY, screenX, screenY
+    altkey, ctrlkey, shiftkey, keyCode
+     */
+
+
+    //   document.getElementById('owl').addEventListener('click', function(e){
+    //    console.log(e);
+    // }, false)
+
+
+   // third parameter is by default 
+   // false ()----called event bubbling (here event propogation is from inside to outside)
+
+    // here since the 3rd parameter was false or if defautlt and we click on owl image first printed ----owl clicked then clicked inside the ul (since owl is inside ul)
+
+    // document.getElementById('images').addEventListener('click', function(e){
+    //    console.log("clicked inside the ul");
+    // }, false) 
+
+    // document.getElementById('owl').addEventListener('click', function(e){
+    //    console.log("owl clicked");
+    //    e.stopPropagation() 
+    //    // now propogation doesnt occur due to it (bubbling or capturing)
+    // }, false) 
+
+
+    /*
+    document.getElementById('images').addEventListener('click', function(e){
+       console.log("clicked inside the ul");
+    }, true) 
+    document.getElementById('owl').addEventListener('click', function(e){
+       console.log("owl clicked");
+    }, true) 
+
+    //another is true -- called event capturing (event propogation is From outside to inside)
+
+     here since the 3rd parameter was true and we click on owl image first printed ---- clicked inside the ul then .....owl clicked  (since owl is inside ul)
+     */
+
+
+
+    // document.getElementById('google').addEventListener('click', function(e){
+    //      e.preventDefault();
+    //      e.stopPropagation();
+    //     console.log("google clicked");   
+    // }, false)
+
+    document.querySelector('#images').addEventListener('click',function(e){
+        // console.log(e.target);// tells the event getting in console on click is thru which target element
+        console.log(e.target.parentNode);
+        console.log(e.target.tagName);// tells us if it is Image or Li or whatever thing it is 
+        if(e.target.tagName==='IMG'){
+            console.log(e.target.id);
+            let removeImg=e.target.parentNode;
+        removeImg.remove()
+        }
+         // 
+    }, false)
+    // removeImg.parentNode.removeChild(removeImg) // also used
+
+</script>
+</html>
