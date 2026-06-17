@@ -6,12 +6,23 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Ayush Ka Project</h1>
+    <h1>setTimeOut Ka Example</h1>
     <button id="stop">Stop</button>
 </body>
 <script>
-    setTimeout(() => {
-        
-    },);
+   //setTimeout(), setInterval(), clearInterval(), clearTimeout()------- these are method but also calls an API (this is not a core Js function it comes thru browser, when these are called it goes outside and thru event queue it comes back)
+   const changedHead= function(){
+    document.querySelector('h1').innerHTML="JS Basics Completed"
+}
+ const changeMe = setTimeout(changedHead,2000);
+// function setTimeout(handler: TimerHandler, timeout?: number, ...arguments: any[]): number
+
+// These are used when we get some pop up or a particular event after few seconds of loading a web page like some ads or imp announcement (in some cases we get it removed and avoided before it appears)
+
+document.querySelector('#stop').addEventListener('click',function(){
+    clearTimeout(changeMe)
+    console.log("Stopped Change !!")// now due to this if we go on web page and press stop button before that 2 sec time the Head change wont occur !!
+})
+
 </script>
 </html>
