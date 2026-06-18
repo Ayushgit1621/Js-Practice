@@ -28,10 +28,10 @@
    xhr.onreadystatechange = function(){
     console.log(xhr.readyState);
     if(xhr.readyState ===4){
-        const data = JSON.parse(this.responseText);
-        console.log(typeof data);
-        console.log(data.followers);
+        const data = JSON.parse(this.responseText);// it is a response and "this" keyword is use to denote that we need  the repsonse inside this very context and response is String type
 
+        console.log(typeof data);// object comes due to JSON.parse method thru JSOn data
+        console.log(data.followers);// 1 my no. of github followers(if not json.parse then it could have been undefined since data is of string type originally)
     }
    }// subscriber model like "onreadystate" continuously monitor things (will see in firebase and places)
   
@@ -39,3 +39,26 @@
 
 </script>
 </html>
+
+<!--
+1.Console is not seen in the standard guidelines of Javascript.
+2.Console and other APIs like document.----- are not in core JS 
+3.It is a browser dev tool which is injected at runtime 
+
+Hence one of such runtime environment is V8 engine (Node.js is an implementation of V8 engine) completely written in C++
+We can say JS runs thru C++
+
+
+## github.com/v8/v8
+ Here all the apis are called to communicate b/w C++  and JS systems
+
+1. Open  src file ------ d8 file--------
+2.d8-console.cc----- this deals with console.log of JS
+3. the WriteToFile file method is responsible to write it down 
+4. void D8Console:: Log() method works to make it run similarly for console.Error, console.Warn, console.Info , console.Debug
+
+Note : Here the main method void WriteToFile and copy all code put it on an Ai tool and explain the code....
+
+This method uses APIs from V8 (google's open source JS engine, To write JS values to a file, along with an optional prefix)
+
+-->
