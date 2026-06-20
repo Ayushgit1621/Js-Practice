@@ -151,3 +151,4 @@ fetch('https://api.github.com/users/Ayushgit1621')
 // until here all the previous promises O/P comes later and github data fetch comes first (Which means those do await till the end)
 
 
+
