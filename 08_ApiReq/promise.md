@@ -48,6 +48,12 @@ directly pushing values to these arrays are not allowed
 THE NETWORK REQUEST goes from here, we cant fire this request directly either the browser or the node environment gives some resource for the request.
 
 a). If request goes (be it any result)---c resolve/onfulfilled[] 
-b). If request doesnt go ---- value goes to  onRegister[] 
+b). If request doesnt go ---- value goes to  onRejection[] 
+
+These are inside Data Section : Initially carrying empty value then according to the value obtained it gets fulfilled by either of the arrays stated above.
+
+
+
+
 
 
