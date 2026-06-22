@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Bind</title>
+</head>
+<body>
+    <button> Button Clicked</button>
+</body>
+<script>
+    class React {
+        constructor(){
+            this.library = "React"
+            this.server ="https://localhost:300"
+
+            // Requirement has 2 parts one is to get the ref. of the button, and a method to handle the click of button
+            document
+            .querySelector('button')
+            .addEventListener('click',this.handleclick.bind(this))
+            
+
+        }
+        handleclick(){
+            console.log("Clicked button !");
+            console.log(this.server);   // it has the ref of this button it cant get to it right now  until bind is given       
+        }
+    }
+
+    const app = new React()
+</script>
+</html>
