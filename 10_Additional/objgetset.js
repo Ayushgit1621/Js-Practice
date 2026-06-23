@@ -11,8 +11,6 @@ const User = {
 }
 
 
-const tea = Object.create(User)
-console.log(tea.email);
 
 
 // node 10_Additional/objgetset.js
