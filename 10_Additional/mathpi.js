@@ -71,8 +71,4 @@ score : 300
 isAvailable : true */
 
 
-
-  
-
-
 // node 10_Additional/mathpi.js
