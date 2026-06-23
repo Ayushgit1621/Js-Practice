@@ -71,8 +71,7 @@ Closure and Lexical Scope
 
 #### Project Link 
 
-[Click Here](https://stackblitz.com/edit/
-stackblitz-starters-g9wvlqqf?file=index.html)
+[Click Here](https://stackblitz.com/edit/stackblitz-starters-g9wvlqqf?file=index.html)
 
 
 ## Technologies Used 
